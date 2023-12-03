@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap");
 
 *,
 *::before,
@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 100%;
   overflow-x: hidden;
   margin: 0 auto;
@@ -24,6 +24,7 @@ body {
 
 .project-heading h2 {
   font-size: 24px;
+  line-height: 1.5;
 }
 .tags ul,
 .project-links ul {
@@ -34,13 +35,12 @@ body {
   flex-direction: row;
 }
 .tags li {
-  background-color: black;
-  color: white;
-  padding: 8px 12px;
+  color: black;
   margin-right: 8px;
   border-radius: 15px;
   font-size: 14px;
   text-align: center;
+  font-family: "Space Mono", monospace;
 }
 
 .demo-link img {
