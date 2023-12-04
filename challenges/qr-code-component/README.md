@@ -24,12 +24,30 @@ Use this section to recap over some of your major learnings while working throug
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="frame">
+  <div class="card">
+    <div class="card-container">
+      <div class="qr-code">
+        <img src="images/image-qr-code.png" />
+      </div>
+      <div class="card-body">
+        <h1>Improve your front-end skills by building projects</h1>
+        <p>
+          Scan your QR code to visit Frontend Mentor and take your coding skills
+          to the next level.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.frame {
+  font-family: "Outfit", sans-serif;
+  text-align: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 ```
 
