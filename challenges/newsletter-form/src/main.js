@@ -1,5 +1,6 @@
 let leftElement = document.querySelector("#left");
 let rightElement = document.querySelector("#right");
+let containerElement = document.querySelector("#container");
 
 let confirmedMessageElement = document.querySelector("#confirmed-message");
 let invalidEmailElement = document.querySelector("#valid-email");
@@ -34,6 +35,7 @@ function formDismissed(event) {
   rightElement.style.display = "block";
   confirmedMessageElement.classList.remove("active");
   confirmedMessageElement.classList.remove("success");
+  containerElement.classList.remove("success");
 }
 
 let submitButtonElement = document.querySelector("#submit");
