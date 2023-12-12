@@ -1,47 +1,58 @@
-const containerE1 = document.getElementById("#container");
-const leftE1 = document.getElementById("#left");
-const rightE1 = document.getElementById("#right");
+let leftElement = document.querySelector("#left");
+let rightElement = document.querySelector("#right");
 
-const userEmailE1 = document.getElementById("#user-email");
-const invaildEmailE1 = document.getElementById("#invalid-email");
-const emailInputE1 = document.getElementById("#email");
-const submitBtnE1 = document.getElementById("#submit");
+let confirmedMessageElement = document.querySelector("#confirmed-message");
+let invalidEmailElement = document.querySelector("#valid-email");
 
-const confirmedMessageE1 = document.getElementById("#confirmed-message");
-const dismissMessageE1 = document.getElementById("#dismiss-message");
+let emailInputElement = document.querySelector("#email");
+let userEmailElement = document.querySelector("#user-email");
 
-function formSuccess() {
-  confirmedMessageE1.classList.add("active");
-  confirmedMessageE1.classList.add("success");
-  leftE1.style.display = "none";
-  rightE1.style.display = "none";
+function formSuccess(event) {
+  event.preventDefault();
+  let leftElement = document.querySelector("#left");
+  let rightElement = document.querySelector("#right");
+  let confirmedMessageElement = document.querySelector("#confirmed-message");
+
+  leftElement.style.display = "none";
+  rightElement.style.display = "none";
+  confirmedMessageElement.classList.add("active");
+  confirmedMessageElement.classList.add("success");
 }
 
 function validateEmail(email) {
-  const emailRegex = /^[^\s@]+\.[^s@]+$/;
-  return emailRegex.test(email);
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(email);
 }
 
-submitBtnE1.addEventListener("click", (e) => {
-  e.preventDefault();
-  const email = emailInputE1.ariaValueMax.trim();
+function formDismissed(event) {
+  event.preventDefault();
+  leftElement.style.display = "block";
+  rightElement.style.display = "block";
+  confirmedMessageElement.classList.remove("active");
+  confirmedMessageElement.classList.remove("success");
+}
+
+let submitButtonElement = document.querySelector("#submit");
+submitButtonElement.addEventListener("click", (event) => {
+  event.preventDefault();
+  let emailInputElement = document.querySelector("#email");
+  let invalidEmailElement = document.querySelector("#invalid-email");
+  let userEmailElement = document.querySelector("#user-email");
+
+  let email = emailInputElement.value.trim();
 
   if (validateEmail(email)) {
-    formSuccess();
-    userEmailE1.innerText = email;
-    emailInout.value = "";
+    formSuccess(event);
+    userEmailElement.innerText = email;
+    emailInputElement.value = "";
 
-    invaildEmailE1.classList.remove("active");
-    emailInputE1.classList.remove("active");
+    invalidEmailElement.classList.remove("active");
+    emailInputElement.classList.remove("active");
   } else {
-    invaildEmailE1.classList.add("active");
-    emailInputE1.classList.add("active");
+    invalidEmailElement.classList.add("active");
+    emailInputElement.classList.add("active");
   }
 });
 
-dismissMessageE1.addEventListener("click", () => {
-  leftE1.style.display = "block";
-  rightE1.style.display = "block";
-  containerE1.classList.remove("success");
-  confirmedMessageE1.classList.remove("active");
-});
+let dismissedElement = document.querySelector("#dismiss-message");
+dismissedElement.addEventListener("click", formDismissed);
