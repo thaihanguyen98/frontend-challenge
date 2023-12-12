@@ -12,11 +12,14 @@ function formSuccess(event) {
   let leftElement = document.querySelector("#left");
   let rightElement = document.querySelector("#right");
   let confirmedMessageElement = document.querySelector("#confirmed-message");
+  let containerElement = document.querySelector("#container");
 
   leftElement.style.display = "none";
   rightElement.style.display = "none";
   confirmedMessageElement.classList.add("active");
   confirmedMessageElement.classList.add("success");
+
+  containerElement.classList.add("success");
 }
 
 function validateEmail(email) {
@@ -26,6 +29,7 @@ function validateEmail(email) {
 
 function formDismissed(event) {
   event.preventDefault();
+
   leftElement.style.display = "block";
   rightElement.style.display = "block";
   confirmedMessageElement.classList.remove("active");
