@@ -6,10 +6,8 @@
     <title>Frontend Mentor Challenge | Thai Ha Nguyen</title>
     <link rel="stylesheet" href="src/style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
     />
     <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
     <script
@@ -18,155 +16,164 @@
     ></script>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="container header text-center">
-          <h1 class="mb-3">Frontend Mentor Challenge</h1>
+    <section class="wrapper">
+      <div class="container-fostrap">
+        <div class="heading">
+          <h1>Frontend Mentor Challenge</h1>
           <h2>by Thai Ha Nguyen</h2>
 
-          <div class="portfolio-link mt-3">
-            <a href="https://thaiha-project-directory.netlify.app/"
-              >My website <i class="fa-solid fa-arrow-right-long"></i
-            ></a>
+          <div class="portfolio-link">
+            <ul>
+              <li>
+                <a href="https://thaiha-project-directory.netlify.app/"
+                  ><i class="fa-solid fa-palette"></i><span> My website</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/thaihanguyen98" target="_blank"
+                  ><i class="fa-brands fa-github"></i><span> Github</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/thaiha-nguyen98/"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                  ><span> Linkedin</span></a
+                >
+              </li>
+              <li>
+                <a href="mailto:thaihanguyen98@gmail.com" target="_blank"
+                  ><i class="fa-solid fa-envelope"></i><span> Email</span></a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-      </header>
-      <main>
-        <div class="container">
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col card" id="card-project">
-              <div class="demo-link">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Live demo of Age calculator app"
-                >
-                  <img
-                    class="img-fluid mb-4"
-                    src="challenges/age-calculator-app/design/desktop-design.jpg"
-                  /><span class="demo-link-hover">View demo</span></a
-                >
+        <div class="content">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <div class="card">
+                  <div class="demo-link">
+                    <a class="img-card" href="#">
+                      <img
+                        src="challenges/age-calculator-app/design/desktop-design.jpg"
+                      /><span class="demo-link-hover">View demo</span>
+                    </a>
+                  </div>
+                  <div class="card-content">
+                    <h4 class="card-title">
+                      <a href="#">Age calculator app</a>
+                    </h4>
+                    <div class="tags mb-3">
+                      <ul>
+                        <li><i class="fa-brands fa-html5"></i> HTML</li>
+                        <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                        <li><i class="fa-brands fa-js"></i> Javascript</li>
+                      </ul>
+                    </div>
+                    <p class="">
+                      This app view an age in years, months and days after
+                      submitting a valid date through a form.
+                    </p>
+                  </div>
+                  <div class="card-read-more">
+                    <a
+                      href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"
+                      class="btn btn-link btn-block"
+                    >
+                      <i class="fa-solid fa-code"> </i> View code
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="project-heading">
-                <h2>Age calculator app</h2>
+              <div class="col-xs-12 col-sm-4">
+                <div class="card">
+                  <div class="demo-link">
+                    <a
+                      class="img-card"
+                      href="challenges/newsletter-form/index.html"
+                    >
+                      <img
+                        src="challenges/newsletter-form/design/desktop-design.png"
+                      /><span class="demo-link-hover">View demo</span>
+                    </a>
+                  </div>
+                  <div class="card-content">
+                    <h4 class="card-title">
+                      <a href="challenges/newsletter-form/index.html"
+                        >Newsletter sign up form</a
+                      >
+                    </h4>
+                    <div class="tags mb-3">
+                      <ul>
+                        <li><i class="fa-brands fa-html5"></i> HTML</li>
+                        <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                        <li><i class="fa-brands fa-js"></i> Javascript</li>
+                      </ul>
+                    </div>
+                    <p class="">
+                      This sign up form that the users should be able to add
+                      their email and submit the form.
+                    </p>
+                  </div>
+                  <div class="card-read-more">
+                    <a
+                      href="https://github.com/thaihanguyen98/frontend-challenge/tree/main/challenges/newsletter-form"
+                      class="btn btn-link btn-block"
+                    >
+                      <i class="fa-solid fa-code"> </i> View code
+                    </a>
+                  </div>
+                </div>
               </div>
-
-              <div class="tags mb-3">
-                <ul>
-                  <li><i class="fa-brands fa-html5"></i> HTML</li>
-                  <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                  <li><i class="fa-brands fa-js"></i> Javascript</li>
-                </ul>
-              </div>
-              <div class="project-body">
-                <p>
-                  This app view an age in years, months and days after
-                  submitting a valid date through a form.
-                </p>
-              </div>
-
-              <div class="project-link">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Github repository for Newsletter sign up form"
-                >
-                  <i class="fa-solid fa-code"> </i> View code</a
-                >
-              </div>
-            </div>
-            <div class="col card" id="card-project">
-              <div class="demo-link">
-                <a
-                  href="challenges/newsletter-form/index.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Live demo of Newsletter sign up form"
-                >
-                  <img
-                    class="img-fluid mb-4"
-                    src="challenges/newsletter-form/design/desktop-design.png"
-                  /><span class="demo-link-hover">View demo</span></a
-                >
-              </div>
-              <div class="project-heading">
-                <h2>Newsletter sign up form with success message</h2>
-              </div>
-
-              <div class="tags mb-3">
-                <ul>
-                  <li><i class="fa-brands fa-html5"></i> HTML</li>
-                  <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                  <li><i class="fa-brands fa-js"></i> Javascript</li>
-                </ul>
-              </div>
-              <div class="project-body">
-                <p>
-                  This sign up form that the users should be able to add their
-                  email and submit the form. You can see a success and
-                  valiadation messaage using Javascript.
-                </p>
-              </div>
-
-              <div class="project-link">
-                <a
-                  href="https://github.com/thaihanguyen98/frontend-challenge/tree/main/challenges/newsletter-form"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Github repository for Newsletter sign up form"
-                >
-                  <i class="fa-solid fa-code"> </i> View code</a
-                >
-              </div>
-            </div>
-
-            <div class="col card" id="card-project">
-              <div class="demo-link">
-                <a
-                  href="challenges/qr-code-component/index.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Live demo of QR code component"
-                >
-                  <img
-                    class="img-fluid mb-4"
-                    src="challenges/qr-code-component/design/desktop-design.jpg"
-                  /><span class="demo-link-hover">View demo</span></a
-                >
-              </div>
-              <div class="project-heading">
-                <h2>QR code component</h2>
-              </div>
-
-              <div class="tags mb-3">
-                <ul>
-                  <li><i class="fa-brands fa-html5"></i> HTML</li>
-                  <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                </ul>
-              </div>
-              <div class="project-body">
-                <p>
-                  Convert the design of a card layout features a QR code into
-                  responsive HTML and CSS.
-                </p>
-              </div>
-
-              <div class="project-link">
-                <a
-                  href="https://github.com/thaihanguyen98/frontend-challenge/tree/main/challenges/qr-code-component"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Github repository for QR code component"
-                >
-                  <i class="fa-solid fa-code"> </i> View code</a
-                >
+              <div class="col-xs-12 col-sm-4">
+                <div class="card">
+                  <div class="demo-link">
+                    <a
+                      class="img-card"
+                      href="challenges/qr-code-component/index.html"
+                    >
+                      <img
+                        src="challenges/qr-code-component/design/desktop-design.jpg"
+                      /><span class="demo-link-hover">View demo</span>
+                    </a>
+                  </div>
+                  <div class="card-content">
+                    <h4 class="card-title">
+                      <a href="challenges/qr-code-component/index.html"
+                        >QR code component</a
+                      >
+                    </h4>
+                    <div class="tags mb-3">
+                      <ul>
+                        <li><i class="fa-brands fa-html5"></i> HTML</li>
+                        <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                      </ul>
+                    </div>
+                    <p class="">
+                      Convert the design of a card layout features a QR code
+                      into responsive HTML and CSS.
+                    </p>
+                  </div>
+                  <div class="card-read-more">
+                    <a
+                      href="https://github.com/thaihanguyen98/frontend-challenge/tree/main/challenges/qr-code-component"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Github repository for QR code component"
+                      class="btn btn-link btn-block"
+                    >
+                      <i class="fa-solid fa-code"> </i> View code
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
   </body>
 </html>

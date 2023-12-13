@@ -1,62 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap");
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+html,
 body {
-  font-family: "Roboto", sans-serif;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   height: 100%;
-  overflow-x: hidden;
-  margin: 0 auto;
-  background-color: #f4f9fc;
+  width: 100%;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
-.header {
-  padding: 100px;
-  height: 300px;
-  margin: 0 auto;
-  color: #0f1b61;
-  background-color: #f4f9fc;
-  border: 1px solid #7f00e0;
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
 }
 
-.header h1 {
-  font-weight: 700;
+.container-fostrap {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.portfolio-link a {
-  text-decoration: none;
-  color: #7f00e0;
-  padding: 8px 12px;
-  border: 2px solid #7f00e0;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 150ms ease-in-out;
+h1.heading {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 900;
+  margin: 0 0 0.5em;
+  color: #505050;
 }
-
-.portfolio-link a:hover {
-  background-color: #c9e8f3;
-  font-style: italic;
+@media (min-width: 450px) {
+  h1.heading {
+    font-size: 3.55em;
+  }
 }
-
-.project-heading h2 {
-  font-size: 24px;
+@media (min-width: 760px) {
+  h1.heading {
+    font-size: 3.05em;
+  }
+}
+@media (min-width: 900px) {
+  h1.heading {
+    font-size: 3.25em;
+    margin: 0 0 0.3em;
+  }
+}
+.card {
+  display: block;
+  margin-bottom: 20px;
   line-height: 1.5;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.25s;
 }
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.img-card {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  display: block;
+  overflow: hidden;
+}
+.img-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.25s ease;
+}
+.card-content {
+  padding: 15px;
+  text-align: left;
+}
+.card-title {
+  margin-top: 0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+  padding-bottom: 1rem;
+}
+.card-read-more {
+  border-top: 1px solid #d4d4d4;
+}
+.card-read-more a {
+  text-decoration: none !important;
+  padding: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .tags ul,
-.project-links ul {
+.portfolio-link ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
+  padding-bottom: 1rem;
 }
+
 .tags li {
   color: black;
   margin-right: 8px;
@@ -65,38 +114,6 @@ body {
   text-align: center;
   font-family: "Space Mono", monospace;
 }
-
-.demo-link img {
-  object-fit: cover;
-  width: 100%;
-  height: 350px;
-  border-radius: 4px;
-}
-
-#card-project {
-  padding: 20px;
-  border: 1px solid #7f00e0;
-  border-radius: 0;
-  background-color: #f4f9fc;
-}
-
-.project-link a {
-  font-size: 14px;
-  text-decoration: none;
-  color: #7f00e0;
-  border: 2px solid #7f00e0;
-  font-weight: 600;
-  border-radius: 12px;
-  padding: 8px 12px;
-  transition: all 150ms ease-in-out;
-}
-
-.project-link a:hover {
-  color: #7f00e0;
-  background-color: #c9e8f3;
-  cursor: pointer;
-}
-
 .demo-link {
   position: relative;
   text-align: center;
@@ -124,9 +141,38 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 960px) {
-  .header {
-    padding: 75px;
-    height: 250px;
-  }
+.heading {
+  padding: 0 0 120px;
+  color: #0f1b61;
+}
+.portfolio-link {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  font-size: 18px;
+}
+.portfolio-link a {
+  text-decoration: none !important;
+  background-color: #183153;
+  color: white;
+  padding: 8px;
+  margin: 0 6px;
+  border-radius: 40px;
+}
+.portfolio-link ul {
+  justify-content: center;
+}
+
+.portfolio-link span {
+  display: none;
+  transition: all 50ms ease-in-out;
+}
+.portfolio-link a:hover span {
+  display: inline;
+  cursor: pointer;
+  color: white;
+}
+.portfolio-link i {
+  color: white;
 }
