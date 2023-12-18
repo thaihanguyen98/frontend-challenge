@@ -1,0 +1,98 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-grey);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 966px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  border-bottom-right-radius: 40%;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--smokey-grey);
+}
+
+.inputs input {
+  font-size: 20px;
+  width: 100px;
+  padding: 10px;
+  border: 0.5px solid var(--light-grey);
+  border-radius: 8px;
+  caret-color: var(--Purple);
+  outline: none;
+  margin: 5px 20px 0 0;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.inputs:last-child {
+  margin-right: 100px;
+}
+
+.button-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0 0 0;
+}
+
+.line {
+  border-bottom: 0.5px solid var(--light-grey);
+  width: 89%;
+}
+button {
+  background-color: var(--purple);
+  border: 0;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+}
+button img {
+  width: 50%;
+}
+.results {
+  font-size: 32px;
+  font-style: italic;
+}
+.results span {
+  color: var(--purple);
+}
