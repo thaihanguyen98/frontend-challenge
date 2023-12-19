@@ -41,6 +41,11 @@ body {
   flex-direction: column;
 }
 
+.inputs small {
+  font-size: 11px;
+  color: var(--light-red);
+}
+
 label {
   font-size: 12px;
   text-transform: uppercase;
